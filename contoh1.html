@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Putri Melati | Web Pribadi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6a89cc, #b8c6e5); /* Biru yang lebih lembut dan elegan */
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1); /* Transparan tapi cukup kontras */
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    main {
+      flex: 1;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    section {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      display: none;
+      animation: fadeIn 0.5s forwards;
+      color: #ffffff;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+      color: #ffffff;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85em;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 30px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>isma</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-btn active" data-page="beranda">Beranda</a></li>
+        <li><a href="#" class="nav-btn" data-page="biodata">Biodata</a></li>
+        <li><a href="#" class="nav-btn" data-page="kontak">Kontak</a></li>
+        <li><a href="#" class="nav-btn" data-page="galeri">Galeri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda" class="active">
+      <h2>Selamat Datang!</h2>
+      <p>Website ini berisi informasi tentang saya, kontak yang bisa dihubungi, dan galeri foto pribadi. Terima kasih telah berkunjung!</p>
+    </section>
+
+    <section id="biodata">
+      <h2>Biodata</h2>
+      <p>
+        Nama: isma <br />
+        Tanggal Lahir: 17 Mei 2008<br />
+        Kota Asal: Bantaeng<br />
+        Hobi: traveling, dan ngedrakor
+      </p>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak Saya</h2>
+      <p>
+        📧 Email: ismaisran102@gmail.com<br />
+        📱 WhatsApp: 0812-3456-7890<br />
+        📸 Instagram: @yxima4_17
+      </p>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri Foto</h2>
+      <div class="gallery">
+        <img src="E:\isma01XITJKT4/cim.JPEG" alt="Foto 1">
+        <img src="E:\isma01XITJKT4/cimo.jpeg" alt="Foto 2">
+        <img src="E:\isma01XITJKT4/cimoy.JPEG" alt="Foto 3">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 – Dibuat dengan ❤️ oleh ISMA
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-btn");
+    const sections = document.querySelectorAll("main section");
+
+    navLinks.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        navLinks.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const target = btn.dataset.page;
+
+        sections.forEach((sec) => {
+          sec.classList.remove("active");
+        });
+
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
